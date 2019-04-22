@@ -3,33 +3,20 @@ import numpy as np
 import datetime
 import seaborn as sns
 import matplotlib.pyplot as plt
-from sklearn.linear_model import LogisticRegression
 from sklearn.svm import SVC, LinearSVC
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.neighbors import KNeighborsClassifier
-from sklearn.naive_bayes import GaussianNB
-from sklearn.naive_bayes import BernoulliNB
-from sklearn.linear_model import Perceptron
-from sklearn.linear_model import SGDClassifier
+from sklearn.naive_bayes import GaussianNB,BernoulliNB
 from sklearn.tree import DecisionTreeClassifier
 from sklearn import linear_model
 from sklearn.datasets import make_regression
 from sklearn.linear_model import ElasticNet
-from imblearn.under_sampling import (EditedNearestNeighbours)
-from imblearn.under_sampling import RandomUnderSampler
-from imblearn.over_sampling import SMOTE
-from imblearn.over_sampling import RandomOverSampler
-from imblearn.over_sampling import ADASYN
+from imblearn.under_sampling import RandomUnderSampler,EditedNearestNeighbours
+from imblearn.over_sampling import SMOTE,RandomOverSampler,ADASYN
 from imblearn.combine import SMOTEENN
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import TimeSeriesSplit
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import accuracy_score
-from sklearn.metrics import confusion_matrix
-from sklearn.metrics import classification_report
-from sklearn.metrics import average_precision_score
-from sklearn.metrics import cohen_kappa_score
-
+from sklearn.metrics import accuracy_score,confusion_matrix,classification_report,average_precision_score,cohen_kappa_score
 
 ## resampling methods
 # SMOTE
