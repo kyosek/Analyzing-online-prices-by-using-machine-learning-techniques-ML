@@ -18,12 +18,10 @@ test["category_code"] = lb_make.fit_transform(test["category"])
 test["pricecat_code"] = lb_make.fit_transform(test["pricecat"])
 
 # select columns by name
-train_y = train.filter(items=['event'])
-test_y = test.filter(items=['event'])
-train_x = train.filter(items=['duration', 'fullprice', 'day_code', 'month_code', 'week_code', 'season_code',
-                              'category_code', 'pricecat_code'])
-test_x = test.filter(items=['duration', 'fullprice', 'day_code', 'month_code', 'week_code', 'season_code',
-                            'category_code', 'pricecat_code'])
+train_y = train.event
+test_y = test.event
+train_x = train[['duration','fullprice', 'day_code', 'month_code', 'week_code', 'season_code','category_code', 'pricecat_code']]
+test_x = test[['duration', 'fullprice', 'day_code', 'month_code', 'week_code', 'season_code','category_code', 'pricecat_code']]
 
 # time series CV
 tscv = TimeSeriesSplit(n_splits=10)
